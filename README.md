@@ -1,7 +1,7 @@
 # jquery-actualizer
 jQuery data actualizer
 
-Include jQuery & this plugin in HTML page and user this js code:
+Include jQuery & this plugin into HTML page and user this js code:
 
 $('#target').actualizer('a');
 
