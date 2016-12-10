@@ -94,4 +94,4 @@
       return target;
     }
   }
-})(jQuery)
+})(jQuery);
