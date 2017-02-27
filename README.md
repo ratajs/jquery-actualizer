@@ -1,5 +1,5 @@
 # jquery-actualizer
-jQuery data actualizer
+jQuery ajax actualizer
 
 Include jQuery & this plugin into HTML page and use this js code:
 
