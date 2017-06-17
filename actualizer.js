@@ -91,7 +91,7 @@
         });
         $.actualizers[target] = false;
       };
-      return target;
+      return $.actualizer;
     }
   }
 })(jQuery);
