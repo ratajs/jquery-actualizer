@@ -33,7 +33,7 @@
       $.actualizers[$fn] = target;
       var method = { meth: target.attr('method') };
       var getMethod = { meth: "get" };
-      var meth = $.extend(getMethod, method).meth;
+      var meth = $.extend(method, getMethod).meth;
       if(target.attr('action')) {
         var act = target.attr('action');
       }
