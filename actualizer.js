@@ -40,7 +40,7 @@
       else {
         var act = window.location.href;
       };
-      if(meth==get) {
+      if(meth=="get") {
         act+= "?";
         target.find(':input[name]').each(function() {
           act+= $(this).attr('name') + "=" + $(this).val() + "&";
