@@ -82,13 +82,7 @@
           else
             var href = window.location.href;
         };
-        link.click(function(event) {
-          if(href=="thisHref")
-            href = $(this)[0].href;
-          window.location.href = href;
-          event.preventDefault();
-          return false;
-        });
+        link.off('click');
         $.actualizers[target] = false;
       };
       return $.actualizer;
