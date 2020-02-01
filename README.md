@@ -1,4 +1,4 @@
-jQuery ajax actualizer
+jQuery AJAX Actualizer
 ======
 
 Include jQuery & this plugin into HTML page and use this js code:
