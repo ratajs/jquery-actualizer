@@ -9,4 +9,4 @@ At click at a arbitrary A element, element with id &lsquo;target&rsquo; will con
 
 You also can write as parameter a form instead of a link.
 
-Here is URL to CDN: https://cdn.jsdelivr.net/gh/ratajs/jquery-actualizer@44a82c94/actualizer.js
+Here is URL to CDN: https://cdn.jsdelivr.net/gh/ratajs/jquery-actualizer/actualizer.js
