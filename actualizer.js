@@ -22,7 +22,7 @@
       var targets = target.children();
       $.actualizers[$fn] = targets;
       targets.click(function(event) {
-        $fn.load($(this)[0].href, {}, function(response, server, xhr) { callback($fn, xhr);});
+        $fn.load($(this)[0].href, {}, function(response, server, xhr) { $fn.trigger('actualize'); callback($fn, xhr);});
         event.preventDefault();
         return false;
       });
@@ -46,7 +46,7 @@
           act+= $(this).attr('name') + "=" + $(this).val() + "&";
         });
         target.submit(function(event) {
-          $fn.load(act, {}, function(response, server, xhr) { callback($fn, xhr);});
+          $fn.load(act, {}, function(response, server, xhr) { $fn.trigger('actualize'); callback($fn, xhr);});
           event.preventDefault();
           return false;
         });
