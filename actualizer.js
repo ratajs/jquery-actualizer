@@ -60,6 +60,7 @@
         target.submit(function(event) {
           $fn.post(act, postData, function(data) {
             callback($fn);
+            $fn.trigger('actualize');
             $fn.html(data);
           });
           event.preventDefault();
