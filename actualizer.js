@@ -12,7 +12,8 @@
     if(target.filter('a').length==target.length) {
       $.actualizers[$fn] = target;
       target.click(function(event) {
-        $fn.load($(this)[0].href, {}, function(response, server, xhr) { $fn.trigger('actualize'); callback($fn, xhr);});
+        var caller = $(this);
+        $fn.load($(this)[0].href, {}, function(response, server, xhr) { $fn.trigger('actualize'); callback($fn, caller, xhr);});
         event.preventDefault();
         return false;
       });
@@ -22,7 +23,8 @@
       var targets = target.children();
       $.actualizers[$fn] = targets;
       targets.click(function(event) {
-        $fn.load($(this)[0].href, {}, function(response, server, xhr) { $fn.trigger('actualize'); callback($fn, xhr);});
+        var caller = $(this);
+        $fn.load($(this)[0].href, {}, function(response, server, xhr) { $fn.trigger('actualize'); callback($fn, caller, xhr);});
         event.preventDefault();
         return false;
       });
@@ -46,7 +48,8 @@
           act+= $(this).attr('name') + "=" + $(this).val() + "&";
         });
         target.submit(function(event) {
-          $fn.load(act, {}, function(response, server, xhr) { $fn.trigger('actualize'); callback($fn, xhr);});
+          var caller = $(this);
+          $fn.load(act, {}, function(response, server, xhr) { $fn.trigger('actualize'); callback($fn, caller, xhr);});
           event.preventDefault();
           return false;
         });
@@ -58,8 +61,9 @@
           postData.inputName = $(this).val();
         });
         target.submit(function(event) {
-          $fn.post(act, postData, function(data) {
-            callback($fn);
+          var caller = $(this);
+          $fn.post(act, postData, function(data, status, xhr) {
+            callback($fn, caller, xhr);
             $fn.trigger('actualize');
             $fn.html(data);
           });
