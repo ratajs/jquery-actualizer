@@ -12,7 +12,7 @@
     if(target.filter('a').length==target.length) {
       $.actualizers[$fn] = target;
       target.click(function(event) {
-        $fn.load($(this)[0].href, {}, function(response, server, xhr) { callback($fn, xhr);});
+        $fn.load($(this)[0].href, {}, function(response, server, xhr) { $fn.trigger('actualize'); callback($fn, xhr);});
         event.preventDefault();
         return false;
       });
