@@ -58,7 +58,7 @@
         var postData = {};
         target.find(':input[name]').each(function() {
           var inputName = $(this).attr('name');
-          postData.inputName = $(this).val();
+          postData[inputName] = $(this).val();
         });
         target.submit(function(event) {
           var caller = $(this);
