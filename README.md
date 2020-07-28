@@ -9,4 +9,5 @@ On click at any A element, the element with id &lsquo;target&rsquo; will contain
 
 You also can write as parameter a form instead of a link.
 
-Here is URL to CDN: https://cdn.jsdelivr.net/gh/ratajs/jquery-actualizer@a6b308c0db16ffc94623addf31daf7169a474db2/actualizer.js
+Include code:
+<code><script src="https://cdn.jsdelivr.net/gh/ratajs/jquery-actualizer@046f03646fb1ce7ab3334d853f902ff133047af1/actualizer.min.js" type="text/javascript" integrity="sha384-4QdkJCahv8yGsY9ZhDuZGCzcTeepxI4uyd5U2+//cnBPh/1C5nO/xH/ztF5wo5rE" crossorigin="anonymous"></script></code>
